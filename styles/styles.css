@@ -1,0 +1,468 @@
+body{
+	font-family: 'Nunito Sans', sans-serif;
+	color:#FFFFFF;
+	font-size:11px;
+	line-height: 15px;
+}
+
+a{
+	text-decoration: none;
+	color:#FFFFFF;
+	transition: all 0.5s ease;
+}
+ul, li{
+	display:block;
+	padding:0;
+	margin:0;
+}
+
+h1{
+	margin:0;
+	padding:0;
+	font-size: 40px;
+	line-height: 53px;
+}
+
+h2, h3, h1{
+	font-family: 'Yeseva One', cursive;
+	text-transform: uppercase;
+}
+
+h1 span{
+	color: #E3B873;
+}
+
+label{
+	font-size: 13px;
+	line-height: 21px;
+	color: rgba(54, 54, 54, 0.5);
+	margin-bottom:10px;
+}
+
+a:hover{
+	color:#E3B873;
+	border-bottom: 1px solid #E3B873;
+}
+
+input{
+	border:none;
+}
+
+.line hr{
+		border: none; 
+    background-color: #E3B873; 
+    color: #E3B873;
+    height: 1.5px;
+}
+
+.projects-header .line hr{
+    width:55px;
+    margin-top:62px;
+}
+
+.online-control-about .line hr{
+    width:55px;
+    margin-top:62px;
+}
+
+.page-header,
+.page-footer{
+	background-color:#131313; 
+}
+
+.container{
+	margin:0 auto;
+	max-width: 1258px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top:37px;
+	padding-bottom:36px;
+}
+
+.btn{
+	font-style: italic;
+	text-align: center;
+	text-transform: uppercase;
+	background: #E3B873;
+	box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+	border-radius: 2px;
+	border:none;
+	color:#FFFFFF;
+	font-family: 'Yeseva One';
+
+}
+
+.btn:hover{
+	background: transparent;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+}
+
+.more-detail-btn:hover,
+.submit-btn:hover{
+	background: transparent;
+	border: 1px solid #131313;
+	color:#131313;
+	border-radius: 2px;
+}
+
+.btn-header,
+.btn-footer{
+	width:161px;
+	padding:13px 33px;
+}
+
+.btn-offer{
+	width:207px;
+	padding:19px 22px;
+	margin-right:20px;
+}
+
+.btns-offer{
+	padding-bottom: 189px;
+	margin-top:40px;
+}
+
+.logo{
+	color: #E3B873;
+	text-transform: uppercase;
+	margin-right:96px;
+}
+
+.menu, 
+.pagination {
+	display:flex;
+	justify-content: center;
+}
+
+.menu-item{
+	margin-right:47px;
+}
+
+.menu li:last-child{
+	margin-right:107px;
+}
+
+.menu-item a{
+	text-transform: uppercase;
+}
+
+.phone {
+	text-align: right;
+	text-decoration-line: underline;
+	color: #E3B873;
+	margin-right: 45px;
+}
+
+.offer{
+	background: url(../img/offer.png) no-repeat center top;
+}
+
+.completed-projects{
+	background: #131313;
+}
+
+.offer-container{
+	max-width:520px;
+	padding-top:194px;
+	padding-left:129px;
+}
+
+.projects-container{
+	display:flex;
+	padding-top: 107px;
+	padding-bottom:415px;
+}
+
+.offer-description{
+	font-size: 22px;
+	line-height: 36px;
+	margin-top:20px;
+}
+
+.projects{
+	margin-left:125px;
+	margin-top:45px;
+	margin-right:50px;
+}
+
+.project-names{
+	display:flex;
+}
+
+.project-name{
+ 	margin-right:59px;
+ 	text-transform: uppercase;
+ 	font-family: 'Yeseva One', cursive;
+ 	font-size: 14px;
+ 	line-height: 19px;
+ 	color: rgba(255, 255, 255, 0.3);
+}
+
+.project-images{
+	margin-top:45px;
+	margin-right: 125px;
+}
+
+.projects h2{
+	font-family: 'Yeseva One', cursive;
+	font-size: 27px;
+	line-height: 37px;
+	letter-spacing: -0.07em;
+	text-transform: uppercase;
+	color: #E3B873;
+}
+
+.projects-header{
+	width:253px;
+	display:flex;
+}
+
+.project-description{
+	font-size: 14px;
+	line-height: 27px;
+}
+
+.project-features{
+	margin-top:42px;
+	display:flex;
+	flex-wrap: wrap;
+	}
+
+.project-feature{
+	margin-right: auto;
+	width:50%;
+}
+
+.project-feature h3{
+	font-family: 'Yeseva One', cursive;
+	font-size: 18px;
+	line-height: 25px;
+	text-transform: uppercase;
+	color: #E3B873;
+}
+
+.feature-value{
+	font-size: 13px;
+	line-height: 21px;
+}
+
+.projects-pagination {
+	margin-top:40px;
+	padding:0;
+}
+.pagination li{
+	margin-right:18px;
+}
+
+.pagination .fa-circle{
+	color:#5A5A5A;
+}
+
+.pagination .active .fa-circle{
+	color:#FFFFFF;
+}
+
+.online-control-container{
+	margin-top:-322px;
+	margin-bottom:147px;
+}
+
+.online-control-about,
+.type-of-repair-name-and-icon{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.online-control-header h2,
+.type-of-repair-header h2{
+	margin:0;
+	padding:0;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.online-control-icon{
+	margin-top: 12px;
+}
+
+.online-control-video{
+	margin-top:31px;
+}
+
+.online-control-description{
+	max-width: 682px;
+	margin-top:34px;
+	font-size: 18px;
+	line-height: 37px;
+	color: #363636;
+	text-align: center;
+}
+
+.call-request{
+	margin-top:76px;
+}
+
+.input-personal-data,
+.input-personal-data-item,
+ .types-of-repair
+{
+	display:flex;
+	justify-content: center;
+}
+
+.input-personal-data-item{
+	flex-direction: column;
+	margin-right: 49px;
+	border-bottom: 1px solid #E3B873;
+}
+
+.submit-personal-data{
+	align-self:center;
+}
+
+.submit-btn{
+	padding:12px 75px;
+	font-size: 13px;
+	line-height: 27px;
+	font-style: normal;
+}
+
+.personal-data-agreement{
+	margin-top:35px;
+	font-size: 14px;
+	line-height: 23px;
+	color: #181818;
+	text-align: center;
+}
+
+.type-of-repair-header h2{
+	color:#181818;
+	margin-bottom: 13px;
+}
+
+.type-of-repair-title h3{
+	margin:25px auto;
+	font-size: 18px;
+	line-height: 25px;
+	color: #363636;
+	padding-left:60px;
+	padding-top:25px;
+	margin-bottom:13px;
+}
+
+.type-of-repair-item{
+	margin-right: 30px;
+}
+
+.types-of-repair{
+	margin-top: 30px;
+}
+
+.type-of-repair-about{
+	position:relative;
+	top:-145px;
+	z-index: 1;
+	background: #FFFFFF top center;
+	width:85%;
+	left:31px;
+	margin-bottom:-145px;
+}
+
+.type-of-repair-description li{
+		display: list-item;
+}
+
+.type-of-repair-description{
+	display: list-item;
+	font-size: 13px;
+	line-height: 27px;
+	color: #959595;
+	padding-left:60px;
+}
+
+.more-detail-btn{
+	width: 67%;
+	padding-top: 14.5px;
+	padding-bottom: 14.5px;
+	font-size: 18px;
+	line-height: 25px;
+	font-style: normal;
+	margin-left:31px;
+	margin-top: 10px;
+}
+
+.type-of-repair-container{
+	margin-bottom:220px;
+}
+
+.steps-of-service{
+	background: url(../img/steps-of-service.png) 100% 100% /cover;
+	align-self: stretch;
+	flex-grow: 1;
+}
+
+.service-container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.circle{
+	width:44px;
+	height:44px;
+	border-radius: 50%;
+	background-color:#E3B873;
+	position:relative;
+	}
+
+.circle span{
+	color:#FFFFFF;
+	font-family: Yeseva One;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 25px;
+	position:absolute;
+	margin: 0;
+	top: 25%;
+  left: 25%;
+  
+	}
+
+.step-description{
+	font-size: 14px;
+	line-height: 19px;
+	color: #363636;
+}
+
+.steps-of-service-item{
+	display:flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 113px;
+}
+.step-number{
+	margin-right:21px;
+}
+
+.send-request-form{
+	background: 
+						url(../img/Vector_red.png) 0% 0% ,
+						url(../img/Vector_red.png) 10% 10% ;
+	background-color: black;
+	max-width: 509px;
+}
+
+.send-request-title{
+	font-size: 18px;
+	line-height: 26px;
+	text-align: center;
+	color: #FFFFFF;
+	margin:28px 105px;
+	text-align: center;
+}
+
+.send-request-input{
+	margin:39px 49px;
+}
