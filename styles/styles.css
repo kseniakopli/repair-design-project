@@ -1,3 +1,4 @@
+/* Section "common styles*/
 body * {
   box-sizing: border-box;
 }
@@ -61,6 +62,8 @@ input {
   color: #e3b873;
   height: 1.5px;
 }
+
+/* Section "Header + Footer" */
 
 .projects-header .line hr {
   width: 55px;
@@ -163,7 +166,7 @@ input {
   color: #e3b873;
   margin-right: 45px;
 }
-
+/* Section "Offer" */
 .offer {
   background: url(../img/offer-background.jpg) no-repeat;
   background-size: cover;
@@ -370,6 +373,9 @@ input {
 
 .input-personal-data-item {
   flex-direction: column;
+}
+
+.online-control .input-personal-data-item {
   margin-right: 49px;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
 }
@@ -579,10 +585,10 @@ input[type="checkbox"]:checked + label::after {
   text-align: center;
 }
 
-.input-personal-data-item {
+.send-request-form .input-personal-data-item {
   margin: 0 49px 39px 49px;
 }
-.input-personal-data-item:last-child {
+.send-request-form .input-personal-data-item:last-child {
   margin-bottom: 16px;
 }
 
@@ -647,6 +653,8 @@ input[type="checkbox"]:checked + label::after {
   text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
 }
 
+/* Section "type-of-styles" */
+
 .type-of-styles {
   background: url(../img/design-style-background.jpg) no-repeat;
   background-size: cover;
@@ -700,6 +708,7 @@ input[type="checkbox"]:checked + label::after {
   margin-top: -320px;
 }
 
+/* Section "Our clients" */
 .our-clients {
   background: url(../img/Group.png) repeat-x;
   background-position: bottom;
@@ -818,6 +827,8 @@ input[type="checkbox"]:checked + label::after {
   border-right: 0.75px solid #ffffff;
 }
 
+/* Section "Have any question" */
+
 .have-any-questions {
   position: relative;
   z-index: 2;
@@ -829,5 +840,102 @@ input[type="checkbox"]:checked + label::after {
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   background-color: #131313;
+  height: 445.32px;
+}
+
+.send-question-name-and-phone {
+  display: flex;
+  justify-content: space-between;
+}
+
+.send-question-name-and-phone .input-personal-data-item {
+  margin-right: 25px;
+  width: 231px;
+}
+
+.have-any-questions-container label {
+  font-size: 13px;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.send-question-personal-agreement label {
+  font-size: 14px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.have-any-questions-container input[type="text"] {
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.have-any-questions-container input[type="text"]::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.have-any-questions-container .input-personal-data-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.send-question-ask-question input[type="text"] {
+  width: 516px;
+}
+
+.send-question-button {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.send-question-btn {
+  padding: 15px 74px;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.send-question-personal-agreement {
+  position: relative;
+}
+
+.send-question-personal-agreement input[type="checkbox"] + label::before {
+  left: -10%;
+}
+
+.send-question-personal-agreement input[type="checkbox"] + label::after {
+  left: -9%;
+  top: 10%;
+}
+/* Section "Our address" */
+
+.our-address {
+  margin-top: -225px;
+  position: relative;
+  background: url(../img/our-address-map.png);
+  height: 953px;
+}
+
+.container-our-address {
+  padding-top: 260px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container-our-address h2 {
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #e3b873;
 }
