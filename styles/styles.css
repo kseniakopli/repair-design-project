@@ -702,6 +702,7 @@ input[type="checkbox"]:checked + label::after {
 
 .our-clients {
   background: url(../img/Group.png) repeat-x;
+  background-position: bottom;
   position: relative;
 }
 
@@ -711,6 +712,7 @@ input[type="checkbox"]:checked + label::after {
   align-items: center;
   position: relative;
   z-index: 1;
+  padding-bottom: 371px;
 }
 
 .our-clients-container h2 {
@@ -720,6 +722,9 @@ input[type="checkbox"]:checked + label::after {
   color: #181818;
 }
 
+.our-clients-description {
+  margin-bottom: 39px;
+}
 .our-clients-description p {
   font-size: 18px;
   line-height: 29px;
@@ -734,4 +739,95 @@ input[type="checkbox"]:checked + label::after {
   bottom: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.95);
+}
+
+.our-clients-name-and-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-clients-feedback-and-work-example {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.our-clietns-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-clients-name-and-photo {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+.our-clients-name-and-photo img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.our-clients-name-and-photo h3 {
+  font-size: 18px;
+  line-height: 23px;
+  color: #181818;
+}
+
+.our-clients-item {
+  max-width: 376px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+  padding-left: 20px;
+  padding-right: 38px;
+  padding-bottom: 90px;
+}
+
+.feedback {
+  font-size: 13px;
+  line-height: 23px;
+  color: #959595;
+}
+
+.work-example {
+  display: flex;
+  margin-top: -30px;
+}
+
+.work-example-meter,
+.work-example-duration {
+  background-color: #e3b873;
+  display: flex;
+  justify-content: space-around;
+  font-family: Yeseva One;
+  font-size: 17px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.work-example-meter {
+  width: 130px;
+}
+
+.work-example-duration {
+  width: 150px;
+}
+
+.work-example-meter {
+  border-right: 0.75px solid #ffffff;
+}
+
+.have-any-questions {
+  position: relative;
+  z-index: 2;
+  margin-top: -220px;
+}
+.have-any-questions-container {
+  max-width: 883px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #131313;
 }
