@@ -1,6 +1,12 @@
 /* Section "common styles*/
-body * {
+*,
+*:after,
+*:before {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
 }
 
 body {
@@ -15,6 +21,7 @@ a {
   color: #ffffff;
   transition: all 0.5s ease;
 }
+
 ul,
 li {
   display: block;
@@ -56,42 +63,14 @@ input {
   border: none;
 }
 
-.line hr {
-  border: none;
-  background-color: #e3b873;
-  color: #e3b873;
-  height: 1.5px;
-}
-
-/* Section "Header + Footer" */
-
-.projects-header .line hr {
-  width: 55px;
-  margin-top: 62px;
-}
-
-.online-control-about .line hr {
-  width: 55px;
-  margin-top: 62px;
-}
-
-.page-header,
-.page-footer {
-  background-color: #131313;
+.line {
+  border-bottom: 1.5px solid #e3b873;
+  width: 91px;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1258px;
-}
-
-.container-header,
-.container-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 37px;
-  padding-bottom: 36px;
 }
 
 .btn {
@@ -103,13 +82,29 @@ input {
   border-radius: 2px;
   border: none;
   color: #ffffff;
-  font-family: "Yeseva One";
+  font-family: Nunito Sans;
 }
 
 .btn:hover {
   background: transparent;
   border: 1px solid #ffffff;
   border-radius: 2px;
+}
+
+/* Section "Header + Footer" */
+
+.page-header,
+.page-footer {
+  background-color: #131313;
+}
+
+.container-header,
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 37px;
+  padding-bottom: 36px;
 }
 
 .more-detail-btn:hover,
@@ -124,17 +119,6 @@ input {
 .btn-footer {
   width: 161px;
   padding: 13px 33px;
-}
-
-.btn-offer {
-  width: 207px;
-  padding: 19px 22px;
-  margin-right: 20px;
-}
-
-.btns-offer {
-  padding-bottom: 189px;
-  margin-top: 20px;
 }
 
 .logo {
@@ -167,6 +151,7 @@ input {
   margin-right: 45px;
 }
 /* Section "Offer" */
+
 .offer {
   background: url(../img/offer-background.jpg) no-repeat;
   background-size: cover;
@@ -186,6 +171,12 @@ input {
   z-index: 1;
 }
 
+.btn-offer {
+  width: 207px;
+  padding: 19px 22px;
+  margin-right: 20px;
+}
+
 .background-overlay,
 .img-overlay {
   position: absolute;
@@ -196,20 +187,26 @@ input {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.container-projects {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 107px;
-}
-
 .offer-description {
   font-size: 22px;
   line-height: 36px;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
+/* Section "Completed projects" */
 .projects {
   max-width: 442px;
+}
+
+.projects .line {
+  margin-bottom: 20px;
+}
+
+.container-projects {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 107px;
 }
 
 .project-names-and-images {
@@ -298,9 +295,16 @@ input {
   background-color: #ffffff;
 }
 
+/*section "Online control "*/
+
 .container-online-control {
   margin-top: -257px;
   margin-bottom: 147px;
+}
+
+.online-control-about .line {
+  width: 55px;
+  margin-top: 62px;
 }
 
 .online-control-about,
@@ -402,6 +406,7 @@ input {
   position: relative;
 }
 
+/* Section "Type of repair" */
 .type-of-repair-header h2 {
   color: #181818;
   margin-bottom: 13px;
@@ -472,6 +477,10 @@ input[type="checkbox"]:checked + label::after {
   margin-right: 30px;
 }
 
+.type-of-repair-item:last-child {
+  margin-right: 0;
+}
+
 .types-of-repair {
   margin-top: 30px;
 }
@@ -507,14 +516,16 @@ input[type="checkbox"]:checked + label::after {
   font-style: normal;
   margin-left: 31px;
   margin-top: 10px;
+  font-family: Yeseva One;
 }
 
 .container-type-of-repair {
   margin-bottom: 120px;
 }
 
+/* Section "Service" */
 .service {
-  margin-bottom: 242px;
+  margin-bottom: 200px;
 }
 
 .steps-of-service {
@@ -573,6 +584,9 @@ input[type="checkbox"]:checked + label::after {
   width: 509px;
   box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
   margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .send-request-title {
@@ -586,7 +600,8 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .send-request-form .input-personal-data-item {
-  margin: 0 49px 39px 49px;
+  margin-bottom: 49px;
+  width: 410px;
 }
 .send-request-form .input-personal-data-item:last-child {
   margin-bottom: 16px;
@@ -618,6 +633,7 @@ input[type="checkbox"]:checked + label::after {
 .send-request-personal-data-agreement {
   position: relative;
   margin-left: 49px;
+  align-self: flex-start;
 }
 
 .send-request-personal-data-agreement label {
@@ -632,18 +648,20 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .send-request-personal-data-agreement input[type="checkbox"] + label::after {
-  left: 1%;
-  top: 10%;
+  left: 2%;
+  top: 20%;
 }
 
 .btn-call {
-  padding: 18px 22px;
+  padding: 18px 37px;
   margin: 39px 49px 27px 244px;
+  font-size: 13px;
+  line-height: 21px;
 }
 
 .sale {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
 }
 
 .sale-description {
@@ -677,7 +695,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .design-styles {
-  width: 85%;
+  width: 77%;
 }
 .design-styles h2 {
   margin-top: 137px;
@@ -809,11 +827,13 @@ input[type="checkbox"]:checked + label::after {
 .work-example-duration {
   background-color: #e3b873;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   font-family: Yeseva One;
   font-size: 17px;
   line-height: 24px;
   text-transform: uppercase;
+  padding: 10px 20px;
 }
 .work-example-meter {
   width: 130px;
@@ -895,12 +915,9 @@ input[type="checkbox"]:checked + label::after {
 }
 .send-question-btn {
   padding: 15px 74px;
-  font-family: Nunito Sans;
   font-style: normal;
   font-size: 13px;
   line-height: 27px;
-  text-align: center;
-  text-transform: uppercase;
 }
 .send-question-personal-agreement {
   position: relative;
@@ -911,8 +928,8 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .send-question-personal-agreement input[type="checkbox"] + label::after {
-  left: -9%;
-  top: 10%;
+  left: -8%;
+  top: 20%;
 }
 /* Section "Our address" */
 
@@ -938,4 +955,9 @@ input[type="checkbox"]:checked + label::after {
   line-height: 28px;
   text-align: center;
   color: #e3b873;
+}
+
+.our-address-icons {
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
