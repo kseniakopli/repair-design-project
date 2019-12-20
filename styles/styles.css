@@ -82,7 +82,7 @@ input {
   border-radius: 2px;
   border: none;
   color: #ffffff;
-  font-family: Nunito Sans;
+  font-family: "Nunito Sans";
 }
 
 .btn:hover {
@@ -95,11 +95,10 @@ input[type="checkbox"] {
   display: none;
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .container {
     padding: 0 18px;
   }
-
   h1 {
     font-size: 23px;
     line-height: 31px;
@@ -161,7 +160,7 @@ input[type="checkbox"] {
   color: #e3b873;
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .menu,
   .btn-footer,
   .btn-header {
@@ -214,7 +213,7 @@ input[type="checkbox"] {
   margin-bottom: 40px;
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .offer {
     height: 476px;
   }
@@ -223,6 +222,9 @@ input[type="checkbox"] {
     flex-direction: column;
     width: 100%;
     padding-top: 85px;
+  }
+  .background-overlay {
+    width: 100%;
   }
   .offer-description {
     font-size: 14px;
@@ -340,7 +342,7 @@ input[type="checkbox"] {
   background-color: #ffffff;
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .container-projects {
     flex-direction: column;
     padding-top: 36px;
@@ -351,10 +353,14 @@ input[type="checkbox"] {
     align-items: center;
     justify-content: space-around;
   }
+  .projects-header {
+    width: 60%;
+  }
   .projects h2 {
     font-size: 22px;
     line-height: 30px;
     margin-bottom: 22px;
+    text-align: center;
   }
   .projects .line {
     width: 0;
@@ -364,15 +370,53 @@ input[type="checkbox"] {
     line-height: 17px;
     text-align: center;
   }
-  .project-names-and-images {
-    order: 1;
-  }
-  .project-images img {
+  .completed-projects-mobile {
+    margin-top: 70px;
     width: 100%;
+    height: 241px;
+    background: url(../img/completed-projects-mobile.jpg) center no-repeat;
+    position: relative;
   }
-  .project-names,
+  .project-names-and-images,
   .projects-pagination {
     display: none;
+  }
+  .completed-projects-mobile::before {
+    content: "";
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    margin-top: -6%;
+    z-index: 2;
+    background: url(../img/arrow-left-mobile.svg) center no-repeat, #e3b873;
+  }
+  .completed-projects-mobile::after {
+    content: "";
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    margin-top: -6%;
+    z-index: 2;
+    background: url(../img/arrow-right-mobile.svg) center no-repeat, #e3b873;
+  }
+
+  .project-feature h3 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .feature-value {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .project-feature:nth-child(1),
+  .project-feature:nth-child(2) {
+    margin-bottom: 27px;
   }
 }
 
@@ -447,9 +491,14 @@ input[type="checkbox"] {
 
 .call-request {
   margin-top: 76px;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.input-personal-data,
 .input-personal-data-item,
 .types-of-repair {
   display: flex;
@@ -458,6 +507,7 @@ input[type="checkbox"] {
 
 .input-personal-data-item {
   flex-direction: column;
+  width: 27%;
 }
 
 .online-control .input-personal-data-item {
@@ -465,12 +515,12 @@ input[type="checkbox"] {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
 }
 
-.input-personal-data input[type="text"] {
-  width: 231px;
+.input-personal-data-item input[type="text"] {
+  font-size: 14px;
 }
 
 .submit-personal-data {
-  align-self: center;
+  width: 27%;
 }
 
 .submit-btn {
@@ -522,18 +572,18 @@ input[type="checkbox"] + label::after {
 }
 
 .personal-data-agreement input[type="checkbox"] + label::before {
-  left: 38%;
+  left: -10%;
 }
 
 .personal-data-agreement input[type="checkbox"] + label::after {
-  right: 60.8%;
-  top: 15%;
+  right: 105%;
+  top: 20%;
 }
 
 input[type="checkbox"]:checked + label::after {
   content: "";
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .online-control {
     background-color: #131313;
   }
@@ -559,15 +609,24 @@ input[type="checkbox"]:checked + label::after {
     line-height: 19px;
     color: #ffffff;
   }
+  .call-request {
+    flex-direction: column;
+  }
   .call-request label {
     color: rgba(255, 255, 255, 0.5);
   }
-  .call-request .input-personal-data input[type="text"] {
+  .call-request .input-personal-data-item input[type="text"] {
     background-color: #131313;
     color: #ffffff;
+    border: none;
   }
   .online-control .input-personal-data-item {
     border-bottom: 1px solid #ffffff;
+    width: 100%;
+    margin-bottom: 72px;
+  }
+  .online-control .input-personal-data-item:nth-child(2) {
+    margin-bottom: 25px;
   }
   input::-webkit-input-placeholder {
     font-size: 14px;
@@ -577,10 +636,32 @@ input[type="checkbox"]:checked + label::after {
   .container-online-control {
     margin-bottom: 88px;
   }
+  .submit-personal-data {
+    order: 4;
+    align-self: flex-start;
+  }
   .submit-btn {
     font-size: 13px;
     line-height: 27px;
-    padding: 20px 140px;
+    padding: 15px 119px;
+    margin-bottom: -25px;
+    margin-top: 62px;
+  }
+  .personal-data-agreement {
+    align-self: flex-start;
+    margin-left: 20px;
+  }
+  .personal-data-agreement label {
+    font-size: 14px;
+    line-height: 23px;
+    color: #ffffff;
+  }
+  .personal-data-agreement input[type="checkbox"] + label::before {
+    left: -7.6%;
+  }
+  .personal-data-agreement input[type="checkbox"] + label::after {
+    right: 103%;
+    top: 20%;
   }
 }
 
@@ -620,6 +701,13 @@ input[type="checkbox"]:checked + label::after {
   width: 85%;
   left: 31px;
   margin-bottom: -145px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+  padding-bottom: 35px;
+}
+.type-of-repair-more-detail {
+  position: relative;
+  margin-top: -182px;
+  z-index: 1;
 }
 
 .type-of-repair-description li {
@@ -649,7 +737,7 @@ input[type="checkbox"]:checked + label::after {
   margin-bottom: 120px;
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .types-of-repair {
     flex-direction: column;
   }
@@ -666,9 +754,13 @@ input[type="checkbox"]:checked + label::after {
   }
   .more-detail-btn {
     margin-top: 0;
+    margin-left: 0;
   }
   .container-type-of-repair {
     margin-bottom: 0;
+  }
+  .type-of-repair-more-detail {
+    margin-top: -210px;
   }
 }
 
@@ -820,7 +912,7 @@ input[type="checkbox"]:checked + label::after {
   text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .service {
     display: none;
   }
@@ -880,7 +972,7 @@ input[type="checkbox"]:checked + label::after {
 .design-styles-images img:nth-child(4) {
   margin-top: -320px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .design-style-list,
   .design-styles-images img,
   .type-of-styles .background-overlay {
@@ -911,6 +1003,30 @@ input[type="checkbox"]:checked + label::after {
     font-size: 22px;
     line-height: 30px;
     text-align: center;
+  }
+  .design-styles-images::before {
+    content: "";
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: absolute;
+    top: 67%;
+    left: 4%;
+    margin-top: -6%;
+    z-index: 2;
+    background: url(../img/arrow-left-mobile.svg) center no-repeat, #e3b873;
+  }
+  .design-styles-images::after {
+    content: "";
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: absolute;
+    top: 67%;
+    right: 4%;
+    margin-top: -6%;
+    z-index: 2;
+    background: url(../img/arrow-right-mobile.svg) center no-repeat, #e3b873;
   }
 }
 /* Section "Our clients" */
@@ -1034,7 +1150,7 @@ input[type="checkbox"]:checked + label::after {
   border-right: 0.75px solid #ffffff;
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .our-clients {
     display: none;
   }
@@ -1055,8 +1171,8 @@ input[type="checkbox"]:checked + label::after {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #131313;
   height: 445.32px;
+  background-color: #131313;
 }
 
 .send-question-name-and-phone {
@@ -1067,6 +1183,9 @@ input[type="checkbox"]:checked + label::after {
 .send-question-name-and-phone .input-personal-data-item {
   margin-right: 25px;
   width: 231px;
+}
+.send-question-ask-question .input-personal-data-item {
+  width: 516px;
 }
 
 .have-any-questions-container label {
@@ -1097,10 +1216,6 @@ input[type="checkbox"]:checked + label::after {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.send-question-ask-question input[type="text"] {
-  width: 516px;
-}
-
 .send-question-button {
   max-width: 200px;
   margin-left: auto;
@@ -1125,8 +1240,7 @@ input[type="checkbox"]:checked + label::after {
   top: 20%;
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
-  .have-any-questions,
+@media (min-width: 320px) and (max-width: 767px) {
   .send-question-name-and-phone {
     display: flex;
     flex-direction: column;
@@ -1137,23 +1251,67 @@ input[type="checkbox"]:checked + label::after {
     margin-top: -230px;
     position: relative;
     z-index: 1;
+    width: 100%;
+    background-color: #131313;
   }
   .have-any-questions-container {
     padding-top: 180px;
+    padding-bottom: 46px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
-
-  .send-question-ask-question input[type="text"] {
+  .have-any-questions-container h2 {
+    margin-bottom: 52px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .send-question-name-and-phone {
+    justify-content: flex-start;
+    margin: 0;
     width: 100%;
+  }
+  .send-question-ask-question .input-personal-data-item,
+  .send-question-name-and-phone .input-personal-data-item {
+    align-self: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .send-question-name-and-phone .input-personal-data-item {
+    margin-bottom: 50px;
+  }
+  .send-question-button {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    margin-top: 67px;
+    align-self: center;
+  }
+  .send-question-btn {
+    padding: 15px 90px;
+    width: 100%;
+  }
+  .send-question-ask-question {
+    width: 100%;
+  }
+  .send-question-ask-question .input-personal-data-item {
+    margin-bottom: 20px;
+  }
+  .send-question-personal-agreement {
+    align-self: flex-start;
+    margin-left: 27px;
   }
 }
 
 /* Section "Our address" */
 
 .our-address {
-  margin-top: -225px;
   position: relative;
   background: url(../img/our-address-map.png);
   height: 953px;
+  margin-top: -225px;
 }
 
 .container-our-address {
@@ -1177,7 +1335,7 @@ input[type="checkbox"]:checked + label::after {
   margin-top: 25px;
   margin-bottom: 30px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .container-our-address {
     font-size: 18px;
     line-height: 25px;
