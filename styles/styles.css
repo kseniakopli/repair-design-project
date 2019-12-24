@@ -70,7 +70,8 @@ input {
 
 .container {
   margin: 0 auto;
-  max-width: 1258px;
+  max-width: 1440px;
+  padding: 0 18px;
 }
 
 .btn {
@@ -80,7 +81,7 @@ input {
   background: #e3b873;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
   border-radius: 2px;
-  border: none;
+  border: 1px solid transparent;
   color: #ffffff;
   font-family: "Nunito Sans";
 }
@@ -95,7 +96,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 1024px) {
   .container {
     padding: 0 18px;
   }
@@ -174,6 +175,21 @@ input[type="checkbox"] {
     color: #ffffff;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-header,
+  .container-footer {
+    justify-content: space-around;
+  }
+  .phone {
+    display: none;
+  }
+  .logo,
+  .menu-item {
+    margin-right: 10px;
+  }
+}
+
 /* Section "Offer" */
 
 .offer {
@@ -417,6 +433,28 @@ input[type="checkbox"] {
   .project-feature:nth-child(1),
   .project-feature:nth-child(2) {
     margin-bottom: 27px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project-images img {
+    width: 100%;
+  }
+  .project-name {
+    margin-right: 10px;
+    font-size: 11px;
+  }
+  .project-description {
+    font-size: 11px;
+  }
+  .projects .line {
+    width: 0;
+  }
+  .project-feature h3 {
+    font-size: 14px;
+  }
+  .feature-value {
+    font-size: 11px;
   }
 }
 
@@ -665,6 +703,12 @@ input[type="checkbox"]:checked + label::after {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .online-control-video img {
+    width: 100%;
+  }
+}
+
 /* Section "Type of repair" */
 .type-of-repair-header h2 {
   color: #181818;
@@ -708,6 +752,17 @@ input[type="checkbox"]:checked + label::after {
   position: relative;
   margin-top: -182px;
   z-index: 1;
+  width: 67%;
+  padding-top: 14.5px;
+  padding-bottom: 14.5px;
+  font-size: 18px;
+  line-height: 25px;
+  font-style: normal;
+  margin-left: 31px;
+  font-family: "Yeseva One";
+  background-color: #e3b873;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .type-of-repair-description li {
@@ -719,18 +774,6 @@ input[type="checkbox"]:checked + label::after {
   line-height: 27px;
   color: #959595;
   padding-left: 60px;
-}
-
-.more-detail-btn {
-  width: 67%;
-  padding-top: 14.5px;
-  padding-bottom: 14.5px;
-  font-size: 18px;
-  line-height: 25px;
-  font-style: normal;
-  margin-left: 31px;
-  margin-top: 10px;
-  font-family: Yeseva One;
 }
 
 .container-type-of-repair {
@@ -752,15 +795,34 @@ input[type="checkbox"]:checked + label::after {
     left: 0;
     top: -180px;
   }
-  .more-detail-btn {
-    margin-top: 0;
-    margin-left: 0;
-  }
   .container-type-of-repair {
     margin-bottom: 0;
   }
   .type-of-repair-more-detail {
     margin-top: -210px;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .types-of-repair {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .type-of-repair-item {
+    width: 50%;
+    margin-right: 0;
+    margin-bottom: 59px;
+  }
+  .container-type-of-repair {
+    margin-bottom: auto;
+  }
+  .type-of-repair-image img {
+    width: 90%;
+  }
+  .type-of-repair-about {
+    left: 0;
   }
 }
 
@@ -917,6 +979,20 @@ input[type="checkbox"]:checked + label::after {
     display: none;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-service {
+    flex-direction: column;
+    align-items: center;
+  }
+  .steps-of-service {
+    max-width: none;
+    width: 100%;
+  }
+  .steps-of-service-items {
+    padding-left: 20px;
+  }
+}
 /* Section "type-of-styles" */
 
 .type-of-styles {
@@ -1027,6 +1103,27 @@ input[type="checkbox"]:checked + label::after {
     margin-top: -6%;
     z-index: 2;
     background: url(../img/arrow-right-mobile.svg) center no-repeat, #e3b873;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .design-styles {
+    width: 50%;
+  }
+  .design-styles-images {
+    flex-direction: row;
+  }
+
+  .design-styles-images img:nth-child(4) {
+    margin-top: auto;
+  }
+  .design-styles-images img:first-child,
+  .design-styles-images img:nth-child(3),
+  .design-styles-images img:nth-child(2) {
+    display: none;
+  }
+  .type-of-styles-container {
+    justify-content: space-around;
   }
 }
 /* Section "Our clients" */
@@ -1153,6 +1250,22 @@ input[type="checkbox"]:checked + label::after {
 @media (min-width: 320px) and (max-width: 767px) {
   .our-clients {
     display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .our-clietns-items {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .our-clients-feedback-and-work-example {
+    margin-bottom: 59px;
+    width: 50%;
+    align-items: center;
+  }
+  .our-clients-name-and-photo h3 {
+    font-size: 14px;
   }
 }
 
@@ -1356,5 +1469,11 @@ input[type="checkbox"]:checked + label::after {
   }
   .our-address .background-overlay {
     display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .our-address-map img {
+    width: 100%;
   }
 }
